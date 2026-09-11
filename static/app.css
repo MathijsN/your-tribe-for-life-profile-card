@@ -6,6 +6,7 @@
 
 :root {
     --color-primary: #373737;
+    --color-secondary: #c0b4a0;
 }
 
 body {
@@ -16,4 +17,10 @@ body {
 
 h1,h2,h3 {
     font-weight: 300;
+}
+
+section,
+img,
+div {
+        border-radius: var(--fav-border-radius);
 }
