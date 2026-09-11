@@ -11,7 +11,7 @@
     <ProfilePicture
         nickname={person.nickname}
         team_s13={person.team_s13}
-        mugshot={person.mugshot}
+        mugshot={person.mugshot_year2}
     />
     <ProfileInfo {person} />
     <ProfileFooter bio={person.bio} />
