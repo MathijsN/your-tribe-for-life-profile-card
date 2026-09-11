@@ -35,9 +35,6 @@
     section {
         background: var(--color-secondary);
         padding: 30px 15px;
-        height: 20em;
-        margin-block: 15px;
-
         display: grid;
         grid-template-rows: min-content 1fr min-content;
 

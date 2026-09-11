@@ -11,8 +11,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    padding-inline: 15px;
     background: #FBF0EC;
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    place-content: center;
 }
 
 h1,h2,h3 {
@@ -24,3 +27,34 @@ img,
 div {
         border-radius: var(--fav-border-radius);
 }
+
+main {
+        display: grid;
+        grid-template-rows: 31.25em 20em 12em;
+        gap: 1rem;
+
+        margin: 1rem;
+
+        @media (width > 797px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 26em 12.5em;
+            max-width: 960px;
+            justify-self: center;
+            align-self: center;
+
+            section:nth-of-type(1) {
+                grid-column: 1/2;
+                grid-row: 1/-1;
+            }
+
+            section:nth-of-type(2) {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+            section:nth-of-type(3) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+        }
+    }

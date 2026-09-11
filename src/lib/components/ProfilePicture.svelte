@@ -12,7 +12,6 @@
 
 <style>
     section {
-        height: 31.25em;
         position: relative;
         overflow: hidden;
 
