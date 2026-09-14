@@ -20,6 +20,12 @@
             height: 100%;
             object-fit: cover;
             scale: 1.1;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transition: all 0.3s ease;
+                scale: 1.3;
+            }
         }
 
         div {
