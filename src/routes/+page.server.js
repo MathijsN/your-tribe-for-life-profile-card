@@ -1,10 +1,17 @@
+import { createDirectus, rest, readItems } from '@directus/sdk';
+const directus = createDirectus('https://fdnd.directus.app').with(rest());
+
 export async function load() {
-    const res = await fetch('https://fdnd.directus.app/items/person?filter[name][_icontains]=mathijs')
-    if (!res.ok) {
-        throw new Error(`Directus error: ${res.status}`)
-    }
-    const personResponseJSON = await res.json()
+    const person = await directus.request(
+        readItems('person', {
+            filter: {
+                name: {
+                    _icontains: 'mathijs'
+                }
+            }
+        })
+    )
     return {
-        person: personResponseJSON.data
+        person: person
     }
 }
